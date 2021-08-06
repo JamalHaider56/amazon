@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "amazone"
+    }
+  },
+  "defaultProject": "amazone",
+  "cli": {
+    "analytics": "91bd1a01-a1ab-459b-9930-ed0bd17d24fc"
+  }
 }

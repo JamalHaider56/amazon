@@ -1,0 +1,45 @@
+<div class="form-body without-side">
+    <div class="website-logo">
+        <!-- <a href="index.html">
+            <div class="logo">
+                <img class="logo-size" src="./assets/images/logo.svg" alt="">
+            </div>
+        </a> -->
+    </div>
+    <div class="row">
+        <div class="img-holder">
+            <div class="bg"></div>
+        </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Register new account</h3>
+                    <!-- <p>Access to the most powerfull tool in the entire design and web industry.</p> -->
+                    <form  [formGroup]="registerForm" novalidate id="registerForm" (ngSubmit)="tryRegister(registerForm.value)" >
+                        <input class="form-control" type="text" name="fullname" formControlName="fullname" required  placeholder="Full Name" required>
+                        <div class="user-name">
+                          <input class="form-control" type="text" name="username" (blur)="onBlurMethodusername()" formControlName="username" required placeholder="Username" required>
+                          <span *ngIf="usernameProcess" class="loaderre"><img src="../../assets/images/register.gif"></span>
+                          <span *ngIf="usernameExist" ngbTooltip="{{ usernameValidationMessage }}" class="error"><img src="../../assets/images/error.svg"></span>
+                          <span *ngIf="usernameNotExist" class="success"><img src="../../assets/images/success.svg"></span>
+                        </div>
+                        <div class="user-name email">
+                          <input class="form-control" type="email" name="email" (blur)="onBlurMethodemail()" formControlName="email" required  placeholder="E-mail Address" required>
+                          <span *ngIf="emailProcess"  class="loaderre"><img src="../../assets/images/register.gif"></span>
+                          <span *ngIf="emailExist"  class="error"><img src="../../assets/images/error.svg"></span>
+                          <span *ngIf="emailNotExist"  class="success"><img src="../../assets/images/success.svg"></span>
+                        </div>
+                        <input class="form-control" type="password" name="password" formControlName="password" required placeholder="Password" required>
+                        <div class="form-button">
+                            <button id="submit" [disabled]="!registerForm.valid || registerProcess || usernameExist" type="submit" [class.loader]="registerProcess" class="ibtn">Register</button>
+                        </div>
+                    </form>
+                    <div class="page-links">
+                        <a routerLink="/login">Login to account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

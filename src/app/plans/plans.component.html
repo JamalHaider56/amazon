@@ -1,0 +1,520 @@
+<!----------trade_plans Content -------------->
+
+<!-- <div class="opt_cont">
+    <div class="calc_bottom">
+        <div class="calc_detail">
+            <label class="font_14 col_darkgray">Balance</label>
+            <div class="calc_box">
+                <p class="col_darkgray">11 143 USD</p>
+            </div>
+        </div>
+        <div class="calc_detail">
+            <label class="font_14 col_darkgray">Trades</label>
+            <div class="calc_box">
+                <p class="col_darkgray">396</p>
+            </div>
+        </div>
+        <div class="calc_detail">
+            <label class="font_14 col_darkgray">ROI</label>
+            <div class="calc_box">
+                <p class="col_green">+ 40.41%</p>
+            </div>
+        </div>
+        <div class="calc_detail">
+            <label class="font_14 col_darkgray">Average R</label>
+            <div class="calc_box">
+                <p class="col_gray">1.72</p>
+            </div>
+        </div>
+        <div class="calc_detail">
+            <label class="font_14 col_darkgray">Winrate</label>
+            <div class="calc_box">
+                <p class="col_gray">45.00%</p>
+
+            </div>
+        </div>
+        <div class="calc_detail">
+            <label class="font_14 col_darkgray">Average PnL</label>
+            <div class="calc_box">
+                <p class="col_green">+ 122.21 USD</p>
+                <p class="col_green">5.3 %</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="plan_cont trade_entry_cont">
+    <div class="head_entry flex">
+        <div class="entry_title">
+            <h2 class="col_darkgray">Trade plans</h2>
+        </div>
+        <div class="add_trade flex">
+            <div class="add_btn">
+                <button class="btn add_trade_btn font_14" data-toggle="modal" data-target="#modal_plan">Add new
+                    plan</button>
+            </div>
+        </div>
+    </div>
+    <div class="trade-data-top">
+        <div class="trade-cont trade_import_pair">
+            <p class="font_14">Asset pair</p>
+        </div>
+        <div class="trade-cont trade_import_date">
+            <p class="font_14">Date</p>
+        </div>
+        <div class="trade-cont trade_import_side">
+            <p class="font_14">Side</p>
+        </div>
+        <div class="trade-cont trade_import_entry">
+            <p class="font_14">Entry</p>
+        </div>
+        <div class="trade-cont trade_import_amount">
+            <p class="font_14">Amount</p>
+        </div>
+        <div class="trade-cont trade_import_tp">
+            <p class="font_14">TP / SL</p>
+        </div>
+        <div class="trade-cont trade_import_pro">
+            <p class="font_14">Proj. profit</p>
+        </div>
+        <div class="trade-cont trade_import_loss">
+            <p class="font_14">Max loss</p>
+        </div>
+        <div class="trade-cont trade_import_pl">
+            <p class="font_14">Proj. P&L on acc.</p>
+        </div>
+        <div class="trade-cont trade_import_project">
+            <p class="font_14">Proj. R/R</p>
+        </div>
+    </div>
+    <div class="without_data">
+        <div class="no_data">
+            <img src="assets/images/no_data.svg">
+            <p class="font_16 col_darkgray no_trade">You have no plan entries.</p>
+            <p class="font_14 new_trade add_trade_btn" data-toggle="modal" data-target="#modal_plan">Add a new plan</p>
+        </div>
+    </div>
+    <div class="with_data" id="accordion">
+        <!----------trade_data 1 -------------->
+        <div *ngFor="let plans of lstPansData" class="trade_data">
+            <div class="trade-data-bottom">
+                <div class="trade-cont trade_import_pair">
+                    <a href="#{{plans.id + 'plan'}}" class="accordion-toggle" data-toggle="collapse"
+                        data-parent="#accordion"><img src="assets/images/down_arrow.svg"></a>
+                    <p class="font_12 col_gray">{{plans.planAssetPair}}</p>
+                </div>
+                <div class="trade-cont trade_import_date">
+                    <p class="font_12 col_gray">{{ plans.createdAt?.toDate() | date: 'MMM d, y h:mm a'}}</p>
+
+                </div>
+                <div class="trade-cont trade_import_side">
+
+                    <p class="font_12 col_gray">{{plans.planSide}}</p>
+                    <p class="font_12 col_gray">{{plans.planLeverage}}x</p>
+                </div>
+                <div class="trade-cont trade_import_entry">
+                    <p class="font_12 col_gray">{{plans.planEntry}} USDT</p>
+                </div>
+                <div class="trade-cont trade_import_amount">
+                    <!-- <p class="font_12 col_green">+ 0.42814250 BTC</p> -->
+                    <p class="font_12 col_gray">{{plans.planAmout}} USDT</p>
+                </div>
+                <div class="trade-cont trade_import_tp">
+                    <p class="font_12 col_green">10 056 USDT</p>
+                    <p class="font_12 col_red">9 493 USDT</p>
+                </div>
+                <div class="trade-cont trade_import_pro">
+                    <p class="font_12 col_green">+ 267.99 USDT </p>
+                    <p class="font_12 col_green">+ 6.5%</p>
+                </div>
+                <div class="trade-cont trade_import_loss">
+                    <p class="font_12 col_red">- 89.3 USDT</p>
+                    <p class="font_12 col_red">- 2.16%</p>
+                </div>
+                <div class="trade-cont trade_import_pl">
+                    <p class="font_12 col_green">+ 2.5%</p>
+                    <p class="font_12 col_red">- 0.83%</p>
+                </div>
+                <div class="trade-cont trade_import_project">
+                    <p class="font_12 col_gray">3.08</p>
+                    <div class="action-box">
+                        <img src="assets/images/opt_menu.svg">
+                        <div class="drop-cont">
+                            <a (click)="setTradePlansData(plans)" data-toggle="modal" data-target="#modal_plan"
+                                class="drop-rename font_14 col_gray">Edit</a>
+                            <a (click)="duplicateTradePlansData(plans)"
+                                class="drop-duplicate font_14 col_gray">Duplicate</a>
+                            <a class="drop-delete font_14 col_gray" data-toggle="modal"
+                                (click)="setPlansIdToDelte(plans.id); setsScreenIdToDelte(plans.id)"
+                                data-target="#modal_delete_Plan">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="{{plans.id + 'plan'}}" class="panel-collapse collapse">
+
+                <!--trade plan --->
+                <div class="trade_data_plan trade_box border_top">
+                    <div class="trade_cont flex">
+                        <div class="plan_note">
+                            <p class="trade_label font_12 col_gray">Notes</p>
+                            {{plans.planNote}}
+                            <!-- <p class="font_12 col_darkgray">Voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                <br>
+                                <br>
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                                fugit, sed quia consequuntur magni dolores eos qui ratione
+                                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                                ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                numquam eius modi tempora incidunt ut labore et dolore magnam
+                                aliquam quaerat voluptatem. Ut enim ad minima veniam.
+                            </p> -->
+                        </div>
+                        <div class="plan_tags">
+                            <p class="trade_label font_12 col_gray">Tags</p>
+                            <p class="note_cat">
+                                <span *ngFor="let planTag of plans.plantags" class="font_12">{{planTag}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--trade plan --->
+
+                <!--trade screenshot --->
+                <div class="screenshot trade_box border_top" (click)=" getPlanIdForScreen(plans.id)">
+                    <div class="trade_title flex">
+                        <p class="font_14 col_darkgray">Screenshots</p>
+                        <div class="action-box">
+                            <img src="assets/images/opt_menu.svg">
+                            <div class="drop-cont screen">
+                                <a class="add_scren drop-rename font_14 col_gray">
+                                    <label for="{{plans.id + 'Plansavatar'}}">
+                                        <input (change)="startUploadPlans($event.target.files)" type="file"
+                                            id="{{plans.id + 'Plansavatar'}}" name="Plansavatar">Add</label>
+                                </a>
+                                <a class="drop-delete font_14 col_gray" data-toggle="modal"
+                                    (click)="setsScreenIdToDelte(plans.id)"
+                                    data-target="#modal_delete_Plan_Screenn">Delete all</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="trade_cont">
+
+                        <span
+                            *ngFor="let tradePlanScreen of lstPlansForScreenShoot | filterByPlansScreen : plans.id ; let i = index;"
+                            class="modal_box">
+                            <a *ngIf="tradePlanScreen.imageUrl" [href]="tradePlanScreen.imageUrl" data-toggle="modal"
+                                (click)="getImageUrlForShowInDialog(tradePlanScreen.imageUrl)"
+                                data-target="#modal_Plans_image">
+                                <img *ngIf="tradePlanScreen.imageUrl" [src]="tradePlanScreen.imageUrl">
+                            </a>
+                        </span>
+
+                        <!-- <span class="modal_box"><img src="assets/images/placeholder2.png"
+                                data-imagebox="gallery"
+                                data-imagebox-src="assets/images/placeholder2.png"></span>
+                        <span class="modal_box"><img src="assets/images/placeholder2.png"
+                                data-imagebox="gallery"
+                                data-imagebox-src="assets/images/placeholder2.png"></span> -->
+                    </div>
+                </div>
+
+                <!--trade screenshot --->
+            </div>
+        </div>
+        <!----------trade_data 1 -------------->
+    </div>
+</div>
+
+
+<!----------trade_plans Content -------------->
+
+<!----------add plan modal -------------->
+
+<div class="modal fade edit_trade edit_plan" id="modal_plan" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="block_cont">
+                <div class="modal-body">
+                    <div class="trade_field">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                        <form class="trade_form" [formGroup]="tradePlansForm">
+                            <div class="left_trade">
+                                <h2 class="modal-title" id="ModalLabel">Trade plan</h2>
+                                <div class="form_group">
+                                    <label for="none" class="font_12 col_gray mr_lb_btm">Asset Pair</label>
+                                    <div class="watch_drop">
+                                        <select id="assetPair" class="drop_sel js-select2" id="dropdownPlanAsset">
+                                            <option *ngFor="let planAssetPairs of lstPlanAssetPairs"
+                                                [value]="planAssetPairs.Title">{{planAssetPairs.Title}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form_group flex">
+                                    <div class="trade_side">
+                                        <label for="none" class="font_12 col_gray mr_lb_btm">Side</label>
+                                        <div class="buy_sell_buton">
+                                            <input type="radio" value="Buy" formControlName="planSide" name="planSide"
+                                                id="plan_buy" class="radio-button" checked />
+                                            <label for="plan_buy"
+                                                class="radio-button-click-target font_14 col_darkgray">
+                                                <span class="radio-button-circle"></span>Buy</label>
+
+
+
+
+                                            <input type="radio" value="Sell" formControlName="planSide" name="planSide"
+                                                id="plan_sell" class="radio-button" />
+                                            <label for="plan_sell"
+                                                class="radio-button-click-target font_14 col_darkgray">
+                                                <span class="radio-button-circle"></span>Sell</label>
+                                        </div>
+                                    </div>
+                                    <div class="trade_leverage">
+                                        <label for="none" class="font_12 col_gray mr_lb_btm">Leverage</label>
+                                        <div class="input-group">
+                                            <input type="number" formControlName="planLeverage"
+                                                class="form_control font_14 col_darkgray" placeholder="1">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text font_14" id="basic-addon2">X</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="none" class="font_12 col_gray mr_lb_btm">Entry</label>
+                                    <div class="input-group">
+                                        <input type="number" (keyup)="onKeyAvgEntrytPrice(planEntry.value)" #planEntry
+                                            formControlName="planEntry" class="form_control font_14 col_darkgray"
+                                            placeholder="9 600">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text font_14" id="basic-addon2">USDT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="none" class="font_12 col_gray mr_lb_btm">Take Profit</label>
+                                    <div class="input-group">
+                                        <input type="number" formControlName="planProfit"
+                                            class="form_control font_14 col_darkgray" placeholder="9 600">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text font_14" id="basic-addon2">USDT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="none" class="font_12 col_gray mr_lb_btm">Amount</label>
+                                    <div class="input-group">
+                                        <input type="number" (keyup)="onKeyAmount(planAmout.value)" #planAmout
+                                            formControlName="planAmout" class="form_control font_14 col_darkgray"
+                                            placeholder="9 600">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text font_14" id="basic-addon2">USDT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="none" class="font_12 col_gray mr_lb_btm">Stop-loss</label>
+                                    <div class="input-group">
+                                        <input type="number" formControlName="planStopLose"
+                                            class="form_control font_14 col_darkgray">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text font_14" id="basic-addon2">USDT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="none" class="font_12 col_gray mr_lb_btm">Total</label>
+                                    <div class="input-group">
+                                        <input type="number" formControlName="planTotal"
+                                            class="form_control font_14 col_darkgray"
+                                            placeholder="{{resultPlanEntryAndAmount}}">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text font_14" id="basic-addon2">USDT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="none" class="font_12 col_gray mr_lb_btm">Tags</label>
+                                    <div class="drop_multy">
+
+                                        <select class="form-control js-example-tokenizer" id="dropdownPlanTag"
+                                            multiple="multiple">
+                                            <option *ngFor="let plantags of lstPlanTags" [value]="plantags.Title">
+                                                {{plantags.Title}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form_group plan_note_txt">
+                                    <label class="font_12 col_gray mr_lb_btm">Note</label>
+                                    <textarea formControlName="planNote" class="form_control note_txt"
+                                        placeholder="Eg. News / Technical analysis / Market outlook / Directional bias / Expectation / Important levels / Confirmation / Invalidation etc."></textarea>
+                                </div>
+                                <div class="form_group web">
+                                    <div class="add_btn trade_btn">
+                                        <button (click)="onTradePlansFormSubmit(tradePlansForm.value)"
+                                            data-dismiss="modal" class="btn note_btn font_14">Save trade plane</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="right_trade">
+                                <div class="calc_bottom">
+                                    <div class="calc_detail">
+                                        <label class="font_14 col_darkgray">Projected profit</label>
+                                        <div class="calc_box">
+                                            <p class="col_green">+ 267.99 USDT</p>
+                                            <p class="col_green">+ 6.5%</p>
+                                        </div>
+                                    </div>
+                                    <div class="calc_detail">
+                                        <label class="font_14 col_darkgray">Proj. profit on account</label>
+                                        <div class="calc_box">
+                                            <p class="col_green">+ 2.5%</p>
+                                        </div>
+                                    </div>
+                                    <div class="calc_detail">
+                                        <label class="font_14 col_darkgray">Max loss</label>
+                                        <div class="calc_box">
+                                            <p class="col_red">- 89.3 USDT</p>
+                                            <p class="col_red">- 2.16%</p>
+                                        </div>
+                                    </div>
+                                    <div class="calc_detail">
+                                        <label class="font_14 col_darkgray">Max loss on account</label>
+                                        <div class="calc_box">
+                                            <p class="col_red">- 0.83%</p>
+                                        </div>
+                                    </div>
+                                    <div class="calc_detail">
+                                        <label class="font_14 col_darkgray">Planned R/R</label>
+                                        <div class="calc_box">
+                                            <p class="col_darkgray">3.08</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_group mob">
+                                <div class="add_btn trade_btn">
+                                    <button class="btn note_btn font_14">Save trade plane</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------add plan modal -------------->
+
+
+<!----------delete entry  -------------->
+
+<div class="modal fade delete_entry" id="modal_delete_Plan" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="block_cont">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="ModalLabel">Delete entry</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="note_field">
+                        <form>
+                            <div class="delete_entry_popup">
+                                <p class="col_darkgray head_line">Are you sure you want to delete this entry?</p>
+                                <p class="font_14 col_darkgray">There is no was to undo this.</p>
+                            </div>
+                            <div class="flex">
+                                <button (click)="plansIdToDelete=''" data-dismiss="modal"
+                                    class="btn note_btn Cancel_btn font_14">Cancel</button>
+                                <button (click)="deleteTradePlans(plansIdToDelete)" data-dismiss="modal"
+                                    class="btn note_btn delete_btn font_14">Delete entry</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----------delete entry  -------------->
+
+
+<!----------Open ScreenShoot modal -------------->
+
+<div class="modal fade edit_modal" id="modal_Plans_image" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-height-fix" role="document">
+        <div class=" modal-content-dialog-image">
+            <div class="block_cont">
+                <div class="modal-header">
+
+                    <button type="button" class="close close-right" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="note_field">
+                        <!-- <form  [formGroup]="noteForm" (ngSubmit)="onNoteFormSubmit(noteForm.value)"> -->
+                        <form>
+                            <!-- <button style="margin-right:46px" type="button" class="close" data-dismiss="modal" aria-label="Close"> </button> -->
+                            <div class="note_popup">
+                                <img style=" width: 90%; left: 10px;" [src]="imageShowInDialog">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------Open ScreenShoot modal -------------->
+
+
+<!----------delete entry  -------------->
+
+<div class="modal fade delete_entry" id="modal_delete_Plan_Screenn" tabindex="-1" role="dialog"
+    aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="block_cont">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="ModalLabel">Delete entry</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="note_field">
+                        <form>
+                            <div class="delete_entry_popup">
+                                <p class="col_darkgray head_line">Are you sure you want to delete this entry?</p>
+                                <p class="font_14 col_darkgray">There is no was to undo this.</p>
+                            </div>
+                            <div class="flex">
+                                <button (click)="ScreenPlansIdToDelete=''" data-dismiss="modal"
+                                    class="btn note_btn Cancel_btn font_14">Cancel</button>
+                                <button (click)="deleteDescriptionsByNoteJournalId()" data-dismiss="modal"
+                                    class="btn note_btn delete_btn font_14">Delete entry</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----------delete entry  -------------->

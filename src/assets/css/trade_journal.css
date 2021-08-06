@@ -1,0 +1,1258 @@
+/*================ trade journal page css ================*/
+
+
+/*================ trade journal tab sec css ================*/
+.main.trade_journal_sec { margin-right: 43px;}
+.head_title h2 {
+    font-size: 28px;
+    line-height: 1.29;
+    margin: 8px 0 24px 0;
+}
+.journal_option .option_tab{
+    display: flex;
+    background: transparent;
+    min-height: auto;
+    margin-bottom: 48px;
+}
+.journal_option .option_tab .nav-pills li {width: Calc(25% - 2px);}
+.jnrl_opt .nav-pills li a{text-align: left;padding-left: 16px;}
+.journal_option .option_tab .nav-pills li:first-child {width: 25%;}
+.journal_option .jnrl_opt .nav-pills {width: 80.33%; margin-right: 40px;}
+.trading_opt {
+    background: #282828;
+    width: 22.7%;
+    margin-right: 16px;
+}
+.trading_switch {width: 12.5%;}
+.trading_switch .switch-toggle label{    padding: 11px 15px;    width: 62px;}
+.opt_cont {margin-bottom: 48px;}
+.opt_cont .calc_detail{ min-width: 13.8%;margin-right: 27px;}
+.opt_cont .calc_box{
+    max-height: 72px;
+    min-height: 72px;display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px;
+}
+.opt_cont .calc_box p {padding-right: 0px;width: 100%;font-size: 16px;}
+.opt_cont .calc_detail.setting {
+    min-width: auto;
+    margin-right: 0;
+}
+.setting .calc_box {margin-top: 5px;}
+.calc_box .more_opt {width: 20px;}
+
+/*pin note*/
+
+/* j css for show 4 Pin note in Journal Trades start */
+.pin_note{
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+/* j css for show 4 Pin note in Journal Trades start */
+.pin_no{
+    margin: 10px;
+    margin-right: 2px !important;
+}
+.journal_title h2 {margin: 0;font-weight: 600;}
+.note_cont h3{margin: 0;margin-bottom: 8px;}
+.journal_title {margin-bottom: 16px;}
+.note_cont {
+    padding: 16px;
+    margin-right: 32px;
+    width: 23.33%;
+    background: #282828;
+    padding-bottom: 8px;
+}
+.note_cont:last-child,.note_cat span:last-child{margin-right: 0}
+.note_cont p {margin-bottom: 8px;}
+.note_cont p.note_data {
+    margin-bottom: 8px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.note_cont p:last-child{margin-bottom: 0;}
+.note_date {color: #6f6f6f;}
+.note_sec {margin-bottom: 24px;}
+.note_cat span {
+    background: linear-gradient(250deg, #408bfc, rgba(187, 142, 255, 0.4));
+    padding: 3px 12px;
+    margin-right: 8px;
+    border-radius: 18px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.trade_opt .select2.select2-container--default .select2-selection--single .select2-selection__rendered{color: #f3f3f3;    letter-spacing: 0.30px;}
+/*================ journal detail css ================*/
+.journal_detail {overflow: hidden;}
+.journal_fold::-webkit-scrollbar,.note_detail::-webkit-scrollbar,.note_cnt::-webkit-scrollbar,.note_content::-webkit-scrollbar,.note_list::-webkit-scrollbar,.journal_fold ul.nav.nav-pills::-webkit-scrollbar{ width: 0px;display: none;}
+
+.journal_fold {
+    float: left;
+    width: Calc(19.4% - 2px);
+    background: #282828;
+    min-height: 565px;
+    max-height: 565px;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+    margin-right: 2px;
+}
+
+.journal_fold1 {
+    float: left;
+    width: Calc(104.4% - 2px);
+    background: #282828;
+    min-height: 70px;
+    max-height: 565px;
+    /* overflow: hidden; */
+    /* overflow-y: scroll; */
+    position: relative;
+    margin-right: 2px;
+}
+
+.journal_note_cnt {float: left;width: 80.6%;}
+.action-box,.action-box2 {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+.action-box img{width: 12px;height: 100%;}
+.action-box:hover,.action-box2.open{box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);}
+.action-box:hover .drop-cont{display: block;}
+
+.drop-cont {
+    display: none;
+    position: absolute;
+    width: 160px;
+    right: 0;
+    z-index: 2;
+    background: #282828;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Jamal css start For li last li last child  */
+.journal_fold .nav-pills li:last-child {
+    margin-bottom: 30px;
+    
+}
+/* Jamal css end For li last li last child  */
+
+.action-box .drop-cont a{
+    text-align: left;
+    border-bottom: 1px solid #3d3d3d;
+    width: 100%;
+    display: block; 
+    padding: 6px 16px;
+}
+.action-box .drop-cont a.add_scren {padding: 0;}
+.action-box .drop-cont a label{padding: 6px 16px;width: 100%;}
+.action-box .drop-cont a:last-child{border-bottom:0;}
+.journal_fold .nav-pills li {margin-top: 8px;}
+.journal_fold ul.nav.nav-pills,.note_list {
+    max-height: Calc(565px - 70px);
+    overflow-y: scroll;
+    /* min-height: 565px; */
+}
+
+/* jamal css for mobile  */
+
+
+.journal_fold .nav-pills li a{
+    padding: 6px 16px;
+    border-radius: 0;
+    width: 100%;
+    display: block;
+}
+.journal_fold .nav-pills li a:hover,.action-box .drop-cont a:hover {
+    background-color: #171717;
+    color: #bbbbbb;
+}
+ .journal_fold .nav-pills li.active > a {
+    background: #3d3d3d;
+    border-left: 4px solid #0062ff;
+    padding-left: 12px;
+    
+   
+}
+.add_btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    
+}
+.add_btn .btn{
+    text-transform: inherit;
+    text-align: left;
+    background: transparent;
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    position: relative;
+}
+.add_btn .btn:after{
+    content: "";
+    background: url(../images/add.svg);
+    background-size: 9px;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 9px;
+    top: 11px;
+    right: 13px;
+    position: absolute;
+}
+
+.note_cnt {
+    width: Calc(28.7% - 2px);
+    float: left;
+    margin-right: 2px;
+    background: #282828;
+    min-height: 565px;
+    max-height: 565px;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+.note_cnt .note_cont{width: 100%;border-bottom: 1px solid #3d3d3d;cursor: pointer;}
+.note_cnt .note_cont.active{border-left: 4px solid #0062ff;    padding-left: 12px;}
+.note_detail {
+    width: 71.3%;
+    float: left;
+    background: #282828;
+    min-height: 565px;
+    max-height: 565px;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+/*================ journal detail css ================*/
+
+/*================ note detail css ================*/
+.note_title {
+    padding: 8px 16px;
+    background: #3d3d3d;
+}
+.note_title h2{    line-height: 1.3;
+    margin: 0;
+    font-family: ibmplexsans;
+    font-size: 20px;
+    font-weight: 400;}
+.note_title .action-box{    position: relative;}
+.note_content {
+    padding: 63px 16px 0;
+    max-height: Calc(565px - 70px);
+    overflow-y: scroll;
+}
+
+.user_note {
+    display: flex;
+    border-bottom: 1px solid #3d3d3d;
+    padding-bottom: 15px;
+    margin-bottom: 8px;
+}
+.user_name p {
+    background: linear-gradient(225deg, #408bfc, rgba(32, 213, 210, 0.4));
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 9px;
+    border-radius: 20px;
+    margin-right: 16px;
+}
+.user_data p {margin-bottom: 8px;}
+.add_comnt {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3d3d3d;
+    border-top: solid 1px #8c8c8c;
+    padding: 10px 11px;
+}
+.img_upload label {
+    width: 15px;
+    height: 15px;
+    margin: 0 10px 0 0;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.img_upload input[type=file] {display: none;}
+.comnt_box input {
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+.comnt_box input::-webkit-input-placeholder { /* Edge */color: #6f6f6f;}
+.comnt_box input:-ms-input-placeholder { /* Internet Explorer 10-11 */color: #6f6f6f;}
+.comnt_box input::placeholder ,textarea.note_txt::placeholder{color: #6f6f6f;}
+.img_upload input[type=file]::-webkit-file-upload-button {visibility: hidden;}
+.comnt_box {width: 100%;}
+.send_btn {
+    width: 17px;
+    height: 18px;
+    cursor: pointer;
+}
+/*================ note detail css ================*/
+.edit_modal.modal.in .modal-dialog {width: 380px;}
+.edit_trade .modal-dialog .modal-content{border-radius: 0}
+.btn.note_btn {
+    background: #0062ff;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    text-align: left;
+    padding: 15px 16px;
+    text-transform: inherit;
+}
+.delete_popup {margin-bottom: 20px;}
+.btn.del_btn{
+    border: 0;
+    width: 120px;
+    margin-right: 20px;
+    color: #000;
+}
+.btn.del_green{background: #00e073}
+.btn.del_red{background: #f6557c;}
+/*================ trade journal tab sec css ================*/
+
+
+/*================ trade entries tab sec css ================*/
+
+.trade_entries .calc_detail,.trade_plans .calc_detail {margin-right: 42px;}
+.trade_entries .calc_detail:last-child,.trade_plans .calc_detail:last-child {
+    margin-right: 0px;
+}
+.trade_entry_cont {background: #282828;}
+.entry_title h2 {
+    margin: 0;
+    padding: 11px 15px;
+    font-size: 20px;
+    line-height: 1.3;
+}
+.trade_filter .action-box2{padding: 8px;    text-align: left;    cursor: inherit;}
+.add_trade .add_btn{padding: 0;}
+.trade_filter .action-box2 img,.trade_edit img {width: 16px; height: 16px;}
+.trade_filter .action-box2 img{cursor: pointer;}
+.trade_edit {
+    width: 40px;
+    height: 32px;
+    padding: 8px;
+    cursor: pointer;
+}
+.trade_edit,.trade_filter{margin-right: 18px;}
+.drop-cont.open {display: block;}
+.trade_filter .action-box2,.add_trade .add_btn {position: relative;}
+.add_btn .add_trade_btn {
+    border: none;
+    padding: 14px 16px;
+    min-width: 178px;
+    background: #0062ff;
+}
+.add_btn .btn.add_trade_btn:after{top: 20px;right: 20px;}
+.entries_cont .trade-cont{width: 15%;}
+.entries_cont .trade-cont.coin_pair {
+    width: 20.1%;    
+    text-align: center;
+    position: relative;
+}
+.entries_cont .trade-cont.coin_date { width: 12.5%;}
+.entries_cont .trade-cont.coin_side {width: 8.5%; text-align: left;}
+.entries_cont .trade-cont.coin_trade_amount { width: 18%;}
+.entries_cont .trade-cont.coin_outcome {width: 13.5%;text-align: left;}
+.entries_cont .trade-cont.coin_trade_proloss {width: 17.1%;}
+.entries_cont .trade-cont.coin_roi_acnt {width: 17.8%;}
+.entries_cont .trade-cont.coin_realize {
+    width: 19.8%;
+    position: relative;
+    padding-right:48px;
+}
+.no_data {text-align: center;padding: 60px 0 250px;}
+.no_data img,.no_data .no_trade{margin-bottom: 10px;}
+.no_data .new_trade{color: #6ea6ff;cursor: pointer;}
+.paging.trade_entry_paging .trade-cont.item_page{ width: 20.6%;}
+.paging.trade_entry_paging .trade-cont.trade_show{width: 70%;}
+.paging.trade_entry_paging .trade-cont.pages{width: 15.5%;}
+.paging.trade_entry_paging .trade-cont.pre_btn,.paging.trade_entry_paging .trade-cont.next_btn{    width: 4.5%;}
+
+/*-------trade add modal css-------------------*/
+.form_group.mob{display: none;}
+.modal.in.edit_trade .modal-dialog{width: 928px;}
+.left_trade .form_group {
+    width: 43%;
+    display: inline-block;
+    margin-right: 40px;
+}
+.trade_side { display: inline-block;width: 70%;}
+.trade_leverage {display: inline-block;width: 28%;}
+.left_trade {
+    float: left;
+    width: 76.8%;
+    padding: 16px 4px 15px 16px;
+}
+.edit_trade .modal-body{padding: 0}
+.right_trade {
+    float: left;
+    width: 23.2%;
+    background: #3d3d3d;
+    padding: 58px 16px 130px 32px;
+}
+.trade_form{overflow: hidden;}
+.right_trade .calc_bottom { display: block;}
+.right_trade .calc_bottom .calc_detail {
+    min-width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+}
+.edit_trade .select2-container--default .selection .select2-selection--single {
+    background-color: #3d3d3d;}
+.edit_trade .modal-content .modal-title{margin-bottom: 32px;}
+.right_trade .calc_box {background: #282828;padding: 14px 16px;}
+.right_trade .calc_box p:last-child{padding: 0}
+.form_group .add_btn.trade_btn {
+    position: relative;
+    padding: 0;
+    margin-top: 16px;
+}
+.form_group .add_btn .btn:after{top: 20px;right: 20px;}
+.form_group .buy_sell_buton label{display: inline-block;    margin-right: 20px;}
+.form_group .buy_sell_buton label:last-child   {margin-right: 0}
+.radio-button,.with_data { display: none;}
+.radio-button-click-target {
+  cursor: pointer;
+  padding: 14px 20px 0px 27px;
+  position: relative;
+}
+.radio-button-click-target:hover .radio-button-circle:before, .radio-button-click-target:focus .radio-button-circle:before {border-color: #bebebe;}
+.radio-button-click-target:active .radio-button-circle:before {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.radio-button-circle {
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 6px;
+  left: 4px;
+  position: absolute;
+  top: 20px;
+  transition: background-color .1s ease-out;
+  vertical-align: middle;
+  width: 6px;
+}
+.radio-button-circle:before {
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 18px;
+  position: absolute;
+  top: -6px;
+  transition: border-color .1s ease-out, -webkit-transform .1s ease-out;
+  transition: border-color .1s ease-out, transform .1s ease-out;
+  transition: border-color .1s ease-out, transform .1s ease-out, -webkit-transform .1s ease-out;
+  left: -6px;
+  width: 18px;
+}
+
+.radio-button:checked + .radio-button-click-target .radio-button-circle {
+  background-color: #f3f3f3;
+}
+
+/*-------trade add modal css------------*/
+
+/*=============manage popup css============*/
+.delete_entry .modal-content .modal-title{font-size: 12px;
+    color: #bebebe;}
+.delete_entry .modal-header{padding-bottom: 5px;}
+.delete_entry .modal-body{padding: 0;}
+.delete_entry_popup .head_line {font-size: 20px;margin-bottom: 16px;}
+.delete_entry_popup{padding: 0px 16px 24px 16px;}
+.delete_entry .modal-dialog .close{    top: 14px;}
+.btn.note_btn.delete_btn { background: #fb4b53;}
+.btn.note_btn.Cancel_btn {background: #6f6f6f;}
+/*=============manage popup css============*/
+
+/*-----------trade filter modal css--------------*/
+.filter_fild {overflow: hidden;padding:16px 0 8px 32px;}
+.filter_fild .form_group {
+    float: left;
+    width: 45%;
+    margin-right: 32px;
+}
+.trade_filter .drop-cont {width: 692px;}
+.trade_filter .select2-container--default .selection .select2-selection--single{    background-color: #3d3d3d;}
+table {color: #000;}
+.select_date input.date {
+    background-color: #3d3d3d;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    padding: 11px 16px;
+    height: auto;
+    border-bottom: 1px solid #6f6f6f;
+    width: 100%;
+}
+.select_date .date::placeholder {
+    color: #8c8c8c;
+    font-family: ibmplexsans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+}
+.select_date .date::-ms-input-placeholder{
+    color: #8c8c8c;
+    font-family: ibmplexsans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+}
+
+.select_date .date:-ms-input-placeholder{
+    color: #8c8c8c;
+    font-family: ibmplexsans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+}
+.select_date span{margin-right: 2px;}
+.select_date span:ladt-child{margin-right: 0}
+.trade_shedule {
+    background: #3d3d3d;
+    border-radius: 4px;
+    margin-top: 26px;
+}
+.trade_shedule p {
+    padding: 10px 0px;
+    display: inline-block;
+    min-width: 96px;
+    text-align: center;
+    position: relative;
+}
+.trade_shedule p:after{
+    content: "";
+    background: #565656;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    height: 20px;
+}
+.trade_shedule p:last-child:after{display: none;}
+.btn.note_btn.btn_reset{background: #6f6f6f;}
+.with_data {min-height: 300px;}
+
+/*-----------trade filter modal css--------------*/
+.trade_data .trade-data-bottom {border-bottom: none;}
+.trade_data {border-bottom: 1px solid #3d3d3d;}
+a.accordion-toggle {
+    position: absolute;
+    left: 17px;
+    transition: all 0.5s;
+}
+a.accordion-toggle[aria-expanded="true"] { transform: rotate(180deg);}
+.panel-collapse { margin-left: 45px;}
+.border_top{border-top:1px solid #3d3d3d;}
+.trade_title {
+    position: relative;
+    padding: 10px 10px 10px 16px;
+    margin-bottom: 16px;
+}
+.add_icon img {width: 9px;height: 9px;}
+.trade_cont{padding: 0px 0 32px 16px;align-items: flex-start;}
+.trade_label{margin-bottom: 8px;}
+.modal_box img {width: 176px;height: 88px;}
+.modal_box{position: relative;}
+.modal_box:hover img {opacity: 0.3;}
+.modal_box:before {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    opacity: 0;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background: url(../images/search.svg);
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.modal_box:after {
+    position: absolute;
+    bottom: -30px;
+    right: 5px;
+    opacity: 0;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    content: '';
+    /* background: url(../images/delete_icon.svg); */
+    background-size: cover;
+    z-index: 9000;
+    transition: 0.4s;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.modal_box:hover:after,.modal_box:hover:before {opacity: 1;}
+.screen input[type=file] {display: none;}
+.screen label{cursor: pointer;margin-bottom: 0;}
+
+/*================ trade management tab sec css ================*/
+.add_icon { cursor: pointer;}
+.manage_note {width: 50%;margin-right: 64px;}
+.manage_entry {width: 25%;}
+.manage_close {width: 25%;}
+
+
+/*=============manage popup css============*/
+.modal.in.edit_manage .modal-dialog{    width: 768px;}
+textarea.note_txt { min-height: 125px;}
+.left_manag, .right_manag {width: 47.4%;}
+.btn.note_btn.manage_btn {width: 17%;    margin: 16px 0 25px;}
+textarea.note_txt{ resize: none;}
+textarea.note_txt::-webkit-scrollbar{ width: 5px;}
+textarea.note_txt::-webkit-scrollbar-thumb {background: #0095ff;outline: 0;}
+textarea.note_txt::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);}
+/*=============manage popup css============*/
+
+/*================ trade management tab sec css ================*/
+
+/*================ trade plan tab sec css ================*/
+.trade_data_plan .trade-cont{text-align: left;}
+.trade_data_plan .trade-data-bottom{align-items: flex-start;margin-bottom: 30px;}
+.trade-cont.coin_plan_date {width: 14.5%;}
+.trade-cont.coin_plan_side {width: 8.3%;}
+.trade-cont.coin_plan_price,.trade-cont.coin_plan_amount,.trade-cont.coin_plan_tp,.trade-cont.coin_plan_profit,.trade-cont.coin_plan_loss,.trade-cont.coin_plan_proloss{
+    width: 20%;
+}
+.trade-cont.coin_plan_roi{width: 15%;}
+.trade-data-bottom .trade-cont .title_head{font-weight: 600;}
+.plan_note { width: 60%;margin-right: 40px;}
+
+
+/*================ trade import modal css ================*/
+.modal.in.import_trade .modal-dialog,.modal.in.import_plan .modal-dialog{ 
+    width: 704px;
+    -webkit-transform: translate(-50%,-0%);
+    -ms-transform: translate(-50%,-0%);
+    -o-transform: translate(-50%,-0%);
+    transform: translate(-50%,0%);
+    top: 20%;
+    margin-bottom: 50px;
+}
+.plan_title.check_trade_entry{background: #0062ff;padding: 9px 21px 9px 14px;}
+.check_trade_entry.check_sel,.uncheck_trade.uncheck_sel{display: none;}
+span.import_icon {
+    border-right: 1px solid #fff;
+    margin-right: 10px;
+    padding-right: 5px;
+
+}
+.check_trade_entry span{cursor: pointer;}
+.import_trade .modal-dialog .modal-content{border-radius: 0;}
+.import_trade .modal-body,.import_plan .modal-body {padding: 0;}
+.plan_title {padding: 11px 21px 11px 14px;background: #3d3d3d;}
+.plan_title .head{font-size: 20px;}
+.import_popup .trade-data-top { background: #6f6f6f;border-bottom: 1px solid #3d3d3d;}
+.trade-cont.history_pair {width: 22%;text-align: center;}
+.trade-cont.history_date {width: 15.4%;}
+.trade-cont.history_side {width: 9.7%; text-align: left;}
+.trade-cont.history_entry {width: 16.2%;}
+.trade-cont.history_amount,.trade-cont.history_fees{width: 18.5%;padding-left: 0px;}
+.check_form,.trade_check_form{position: absolute;}
+.check_form input,.trade_check_form input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.check_form label,.trade_check_form label {
+  position: relative;
+  cursor: pointer;
+}
+.check_form label:before,.trade_check_form label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+
+}
+.check_form input:checked + label:after,.trade_check_form input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid #000;
+    border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+}
+.check_form input:checked + label:before,.trade_check_form input:checked + label:before{background: #fff;border-radius: 2px;}
+.trade-data-bottom.check {background: #3d3d3d;}
+.paging .select2.select2-container--default .select2-selection--single .select2-selection__rendered{color: #f3f3f3;}
+.paging .select2.select2-container--default .select2-selection--single .select2-selection__arrow{background: url(../images/down_arrow1.svg);top: 30%;}
+.trade-data-bottom.paging {min-height: auto;}
+.paging .trade-cont {
+    border-right: 1px solid #3d3d3d;
+    padding: 4px 14px;    
+    justify-content: inherit;
+}
+.trade-cont.item_page {width: 33.4%;padding-right: 8px;}
+.paging .trade-cont.trade_show {
+    width: 43.5%;
+    padding: 13px 14px 14px 14px;
+    text-align: left;
+}
+.trade-cont.pages {width: 26.5%;padding-left: 0;}
+.paging .trade-cont.pre_btn,.paging .trade-cont.next_btn {
+    width: 8%;
+    text-align: center;
+    padding: 15px 14px;
+}
+.paging .trade-cont.next_btn {border-right: 0;}
+.pre_btn img {transform: rotate(90deg);}
+.next_btn img { transform: rotate(-90deg);}
+.pre_btn p,.next_btn p{cursor: pointer;}
+/*================ trade import modal css ================*/
+
+
+/*================ trade plan import modal css ================*/
+
+.modal.in.import_plan .modal-dialog{width: 1216px;}
+.trade-cont.trade_import_pair {width: 22%;text-align: center;}
+.trade-cont.trade_import_date {width: 15.4%;}
+.trade-cont.trade_import_side {width: 9.7%;}
+.trade-cont.trade_import_entry {width: 16%;}
+.trade-cont.trade_import_amount{width: 20.4%;}
+.trade-cont.trade_import_tp,.trade-cont.trade_import_loss{
+    width: 18.4%;
+}
+.trade-cont.trade_import_pro {width: 19%;}
+.trade-cont.trade_import_pl {width: 22.1%;}
+.trade-cont.trade_import_project {width: 14.2%;}
+.trade_paging .trade-cont.item_page{width: 17.4%;}
+.trade_paging.paging .trade-cont.trade_show{    width: 70.5%;}
+.trade_paging .trade-cont.pages{ width: 14%;}
+.trade_paging.paging .trade-cont.pre_btn,.trade_paging.paging .trade-cont.next_btn{width: 4%;}
+.trade_check_form label:before,.trade_check_form input:checked + label:before{border-radius: 50px;}
+/*================ trade plan import modal css ================*/
+
+/*================ trade plan tab sec css ================*/
+
+/*================ trade entries tab sec css ================*/
+
+
+/*================ trade plan tab sec css ================*/
+
+
+.trade_entry_cont .trade-cont.trade_import_pair {
+    width: 20.1%;
+    text-align: center;
+    position: relative;
+}
+.trade_entry_cont .trade-cont.trade_import_date{width: 12.5%;}
+.trade_entry_cont .trade-cont.trade_import_side{width: 8.5%;text-align: left;}
+.trade_entry_cont .trade-cont.trade_import_entry {width: 13%;}
+.trade_entry_cont .trade-cont.trade_import_amount {width: 18%;}
+.trade_entry_cont .trade-cont.trade_import_tp {width: 14%;}
+.trade_entry_cont .trade-cont.trade_import_pro{width: 15.5%;}
+.trade_entry_cont .trade-cont.trade_import_loss {width: 17.1%;}
+.trade_entry_cont .trade-cont.trade_import_pl{width: 19.8%;}
+.trade_entry_cont .trade-cont.trade_import_project{
+    width: 15.8%;
+    position: relative;
+    padding-right: 48px;
+}
+/*================ trade add plan modal css ================*/
+  .modal.in.edit_plan .modal-dialog{
+    -webkit-transform: translate(-50%,-0%);
+    -ms-transform: translate(-50%,-0%);
+    -o-transform: translate(-50%,-0%);
+    transform: translate(-50%,0%);
+    top: 15%;
+    margin-bottom: 50px;
+}
+.left_trade .form_group.plan_note_txt { width: 93%;margin: 0;}
+.edit_plan .drop_multy {margin-bottom: 0;}
+.edit_plan .right_trade{padding-bottom: 173px;}
+/*================ trade add plan modal css ================*/
+
+/*================ trade plan tab sec css ================*/
+
+/*================ trade account tab sec css ================*/
+.account_sec {width: 62%; margin: 0 auto;}
+.account_head img {margin-right: 10px;}
+.account_box {
+    padding: 24px 16px;
+    border-bottom: 1px solid #3d3d3d;
+    min-height: 87px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.account_box:last-child{border-bottom: 0;}
+.account_box.account_head { padding: 11px 16px; min-height: auto;}
+.acount_title { width: 33%;}
+.account_input {width: 75%;}
+.account_box .form_control {
+    margin-bottom: 0;
+    width: 56.5%;
+    padding: 9px 16px;
+}
+.account_box .input-group>.form_control{ 
+    -webkit-box-flex: inherit;
+    -ms-flex: inherit;
+    flex: inherit;    
+    width: 35.3%;
+}
+.account_box .profit_price_drop {
+    margin-left: 2px;    
+    width: 20.8%;
+    margin-right: 10px;
+}
+.account_input .input-group { margin-bottom: 8px;}
+.add_asset { color: #6ea6ff;padding-top: 8px;}
+.account_box.balance_cont,.account_box.secret_key {align-items: flex-start;}
+.balance_cont .acount_title p {margin-bottom: 11px; padding-right: 35px;}
+.account_input .check_form { position: relative;}
+.account_input label{margin-bottom: 0}
+.account_input.conect_form { margin: 0;}
+.account_input.conect_form span.select2.select2-container.select2-container--default {
+    width: 56.5% !important;
+}
+.account_input.conect_form .select2-container--default .selection .select2-selection--single{padding: 10px 16px;}
+button.add_account {
+    text-transform: inherit;
+    text-align: left;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    position: relative;
+    display: block;
+    width: 56.5%;
+    margin-top: 32px;
+}
+.generate_key {
+    display: inline-block;
+    margin-left: 24px;
+    color: #6ba4ff;
+}
+.generate_key img{margin-left: 10px;}
+.account_balance {
+    width: 56.5%;
+    background: #282828;
+    padding: 14px 16px;
+}
+span.bal_coin {margin-left: 8px;color: #6f6f6f;}
+.acount_title .link {color: #6ba4ff;}
+.delect_field img{cursor: pointer;}
+.delect_field {align-items: center;display: flex;}
+.edit_account img {cursor: pointer;}
+
+
+
+/*================ edit account modal css ================*/
+.modal.in.edit_acnt_modal .modal-dialog{
+    -webkit-transform: translate(-50%,-0%);
+    -ms-transform: translate(-50%,-0%);
+    -o-transform: translate(-50%,-0%);
+    transform: translate(-50%,0%);
+    top: 15%;
+    margin-bottom: 50px;
+    width: 800px;
+}
+.edit_acnt_modal .btn.note_btn{width: 56.5%;margin-top: 32px;}
+.delete_account .modal-body { padding: 0;}
+.delete_account .modal-header {padding-bottom: 5px;}
+.delete_account .modal-content .modal-title {font-size: 12px;color: #bebebe;}
+/*================ edit account  modal css ================*/
+
+.import_popup.mob{display: none;}
+.generate_filed input.form_control {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+/*================ trade account tab sec css ================*/
+
+/*================ trade journal page css ================*/
+
+
+@media (min-width:1180px) and (max-width:1280px){
+    .trading_switch {width: 13.5%;}
+    .entries_cont .trade-cont.coin_roi_acnt {width: 19.8%;}
+    .entries_cont .trade-cont.coin_trade_amount {width: 20%;}
+    .trade_entry_cont .trade-cont.trade_import_entry {width: 12%;}
+    .trade_entry_cont .trade-cont.trade_import_amount {width: 20%;}
+    .trade_entry_cont .trade-cont.trade_import_tp {width: 15%;}
+    .trade_entry_cont .trade-cont.trade_import_pl {width: 20.8%;}
+    .trade_entry_cont .trade-cont.trade_import_pro {width: 16.5%;}
+    .opt_cont .calc_detail {min-width: 13.4%;}
+
+}
+
+
+@media (min-width:768px) and (max-width:1024px) {
+    .main.trade_journal_sec {margin-right: 0; }
+    .trade_entry_cont .trade-cont{    padding: 7px 9px;}
+    .trade_entry_cont .trade-data-top .font_14{font-size: 12px;}
+    .trading_switch {width: 17.5%;}
+    .opt_cont .calc_detail {min-width: 14.4%;margin-right: 20px;}
+    .trade_journal .opt_cont .calc_detail{min-width: 13.4%;}
+    .paging.trade_entry_paging .trade-cont.trade_show {width: 56%;}
+    .trade_entries .calc_detail, .trade_plans .calc_detail {margin-right: 25px;}
+    a.accordion-toggle {left: 6px;}
+    .entries_cont .trade-cont.coin_trade_proloss {width: 18.1%;}
+    .entries_cont .trade-cont.coin_roi_acnt {width: 18.8%;}
+    .entries_cont .trade-cont.coin_realize {width: 20.8%;}
+    .trade_journal .opt_cont .calc_detail.setting {min-width: auto;}
+    .modal.in.edit_trade .modal-dialog,.edit_modal.modal.in .modal-dialog,
+    .modal.in.edit_manage .modal-dialog{
+        -webkit-transform: translate(-50%,-0%);
+        -ms-transform: translate(-50%,-0%);
+        -o-transform: translate(-50%,-0%);
+        transform: translate(-50%,0%);
+        top: 15%;
+        margin-bottom: 50px;
+    }
+    .modal.in.import_plan .modal-dialog {width: 95%;}
+    .import_plan .trade-cont{    padding: 7px 5px;}
+    .trade_paging .trade-cont.item_page {width: 18.4%;}
+    .trade_paging.paging .trade-cont.trade_show {width: 59.5%;}
+}
+
+
+@media (min-width:769px) {
+}
+
+@media (max-width:768px) {
+
+    /* Jamal Css start  for image dialog mobile start*/
+/* .modal.in  .modal-dialog-height-fix-mobile{
+    left: 4% !important;
+}
+
+.modal-dialog .modal-content-dialog-image-mobile {
+    height: 370px;
+    width: 296px;
+    
+} */
+/* Jamal Css start  for image dialog mobile End*/
+
+    .modal.in.edit_trade .modal-dialog,.edit_modal.modal.in .modal-dialog,
+    .modal.in.edit_manage .modal-dialog,.modal.in.import_trade .modal-dialog, .modal.in.import_plan .modal-dialog,.modal.in.edit_acnt_modal .modal-dialog{
+        -webkit-transform: translate(0%,-0%);
+        -ms-transform: translate(0%,-0%);
+        -o-transform: translate(0%,-0%);
+        transform: translate(0%,0%);
+        top: 0;
+        left: 0;
+        margin-bottom: 0px;
+        width: 100%;
+    }
+    .left_trade .form_group{margin-right: 35px;}
+    .trade_filter .drop-cont {width: 450px;}
+    .filter_fild{padding: 10px;}
+    .filter_fild .form_group { width: 48%; margin-right: 8px;}
+    .trade_shedule p {
+        padding: 10px 4px;
+        min-width: auto;}
+        a.accordion-toggle {
+        left: 5px;
+        top: -25px;
+    }
+    .opt_cont .calc_box p{font-size: 10px;}
+    .setting .calc_box{padding: 0}
+    .opt_cont .calc_detail {min-width: 13.6%;}
+    .paging.trade_entry_paging .trade-cont.pre_btn, .paging.trade_entry_paging .trade-cont.next_btn {width: 6.5%;padding: 18px 14px;}
+    .paging.trade_entry_paging .trade-cont.pages {width: 20.5%;}
+    .paging.trade_entry_paging .trade-cont.trade_show {width: 41%;}
+    .paging.trade_entry_paging .trade-cont.item_page {width: 25.6%;}
+    .trade_paging .trade-cont.item_page {width: 26.4%;}
+    .trade_paging.paging .trade-cont.trade_show {
+        width: 50.5%;    
+        padding: 16px 14px 17px 14px;
+    }
+    .trade_paging .trade-cont.pages {width: 20%;}
+    .trade_paging.paging .trade-cont.pre_btn, .trade_paging.paging .trade-cont.next_btn {
+        width: 7%;padding: 18px 14px;
+    }
+    .journal_option .jnrl_opt .nav-pills { width: 78.33%; margin-right: 20px;}
+    .trading_opt{ margin-right: 10px;}
+    .trading_switch {width: 22.5%;}
+    .sidebar ul li.active:after{display: none;}
+    .sidebar.active ul li.active:after{display: block;}
+}
+
+@media (max-width:767px) {
+
+    /*================journal tab css ================*/
+    .main.mob.mob_trade_journal {height: auto;}
+    .head_title h2 {
+        margin: 20px 0 24px 0;
+        text-align: center;
+    }
+    .trading_opt{width: 100%;margin-bottom: 8px;}
+    .mob_pd{padding: 0 16px;}
+    .journal_option{background: #282828;margin-bottom: 16px;}
+    .trading_switch {width: 100%;}
+    .seeting_btn p {
+        padding: 10px;
+        background: #282828;
+        margin-left: 8px;
+    }
+    .seeting .trade_filter{margin-right: 0;}
+    .trade_filter .action-box2 {
+        padding: 9px 0px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        cursor: inherit;
+        background: #282828;
+        margin: 0px 6px;
+        position: inherit;
+    }
+    .trade_filter .action-box2 img {width: 24px;height: 24px;}
+    .seeting_btn img {width: 24px;}
+    .trade_filter .drop-cont {width: 100%;margin-top: 8px;text-align: left;}
+    .filter_fild .form_group {width: 100%;margin-right: 0px;}
+    .trade_shedule p {padding: 10px 0px;min-width: 32%;}
+    .datepicker-dropdown.datepicker-orient-left:after {left: 50%;}
+    .trading_switch .switch-toggle label{width: 48%;}
+    input#mob_option2:checked + label ~ .switch_block {
+        left: 50%;
+        border-radius: 0px 4px 4px 0px;
+    }
+    .mob_opt_cont {
+        padding: 16px 16px 0px 24px;
+        margin-top: 8px;
+        background: #282828;
+        position: relative;
+        margin-bottom: 32px;
+    }
+    .mob_opt_cont a.accordion-toggle{
+        left: auto;
+        top: auto;
+        right: 16px;
+        bottom: 15px;
+        cursor: pointer;
+    }
+    .mob_opt_cont .calc_detail {
+        margin-right: 0px;
+        width: 49%;vertical-align: text-top;
+        margin-bottom: 24px;
+    }
+    .mob_opt_cont .panel-collapse{    margin-left: 0;}
+    .note_cont{width: 100%;}
+
+
+    /*================ slider css ================*/
+
+    .mob_pd .note_sec {margin-bottom: 40px;}
+    .owl-dots {display: flex;margin-top: 10px;justify-content: center;}
+    .owl-carousel .owl-dots button.owl-dot {
+        width: 24.2%;
+        height: 4px;
+        background: #3d3d3d;
+        margin-right: 4px;
+         border-radius: 2px;
+    }
+    .owl-carousel .owl-dots button.owl-dot.active{background: #d8d8d8}
+    .owl-carousel .owl-dots button.owl-dot:last-child{margin-right: 0}
+
+    /*================ slider css ================*/
+    .mob_entrie_sec,.mob_plan_sec,.mob_account_sec{display: none;}
+
+    /*================note sec css ================*/
+    .mob .journal_fold,.journal_note_cnt.mob, .note_detail.mob,.note_cnt {
+        float: none;
+        width: 100%;
+    }
+    .journal_note_cnt.mob.open,.note_detail.mob.open{display: block;}
+    .journal_note_cnt.mob,.note_detail.mob,.mob .journal_fold.close,.note_detail.mob.open.close{display: none;}
+    .note_title h2{font-size: 14px;    padding-left: 20px;}
+    a.back_btn {position: absolute;left: 10px;transform: rotate(90deg);}
+    .note_cnt .note_list {padding: 0 16px;margin-top: 16px;}
+    .note_list li{background:#3d3d3d;}
+    .journal_fold ul.nav.nav-pills, .note_list{min-height: 500px;}
+    .journal_fold,.note_cnt{min-height: 500px;max-height: 500px;}
+
+    /*================note sec css ================*/
+
+    /*================journal tab css ================*/
+
+    /*================entries tab css ================*/
+    .add_btn .add_trade_btn{padding: 10px 16px;}
+    .add_btn .btn.add_trade_btn:after {top: 17px;}
+    .mob .coin_action{position: relative;}
+    .mob .add_trade{margin-bottom: 16px;}
+    .mob .action-box:hover{background: #282828;}
+    .mob .trade-data-top .trade-cont.coin_pair{padding:20px 0 0;}
+    .mob .mob_plan .trade-data-top .trade-cont.coin_pair{padding: 0}
+    .mob_plan .trade-data-top{padding: 16px 24px;}
+    .mob .trade-data-top .trade-cont.coin_pair span:first-child{margin-right: 8px;}
+    .mob .trade-data-top .trade-cont.coin_pro_loss{padding:16px 0;}
+    .trade-cont .avg_close{margin-top: 8px;}
+    .trade-data-bottom.mob a.accordion-toggle { position: relative;float: right;}
+    .modal_box:after,.modal_box:after{display: none;}
+    .panel-collapse { margin-left: 0;}
+    .trade_cont{padding-left: 0;}
+    .trade-data-bottom .trade-cont.coin_amount,.trade-cont,.trade_data_plan .trade-data-bottom{padding: 0;}
+    .trade_data_plan .trade-data-bottom{margin-bottom: 0px;border-bottom: 0;}
+    .trade_title{padding: 10px 0}
+    .manage_note,.manage_entry,.manage_close,.plan_note{width: 100%;}
+    .modal_box img {width: 82%;height: 120px;}
+    .modal_box span img {width: 45px;margin-left: 9px;}
+    .manage_note,.manage_entry,.plan_note{margin-bottom: 24px;}
+    .screenshot .modal_box {margin-bottom: 5px;}
+    .mob_plan_sec .plan_note {margin-top: 16px;}
+    .screenshot .modal_box:before{display: none;}
+    .modal_box:hover img{opacity: 1}
+
+    /*================trade add modal css ================*/
+
+    .form_group.mob{display: block;}
+    .form_group.web{display: none;}
+    .left_trade .form_group {margin-right: 0;}
+    .left_trade .form_group {width: 100%;}
+    .left_trade,.right_trade  {float: none;width: 100%;padding: 0;}
+    .right_trade .calc_bottom{overflow: hidden;}
+    .right_trade .calc_bottom .calc_detail {
+        width: 47.6%;
+        min-width: auto;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        float: left;
+    }
+    .right_trade .calc_bottom .calc_detail:nth-child(2n) {margin-right: 0;}   
+    .trade_side{float: left;}
+    .radio-button-circle{left: 8px;}
+    .right_trade .calc_box {background: #3d3d3d;}
+    .right_trade {background: transparent;}
+    .edit_trade .modal-dialog .modal-content{padding: 16px;padding-bottom: 40px;}
+    /*================trade add modal css ================*/
+    .manage_popup .flex {display: block;}
+    .left_manag, .right_manag ,.btn.note_btn.manage_btn{width: 100%;}
+    .import_popup.mob{display: block;}
+    .import_popup.web{display: none;}
+    .edit_trade .modal-dialog .close {right: 0;top: 0;}
+    .import_trade .modal-content .modal-title{padding-right: 30px;}
+    .import_popup .trade-data-top,.import_popup .trade-data-bottom{background:#3d3d3d;}
+    .plan_title{background: #565656;}
+    .coin_head {position: relative;}
+    .check_form, .trade_check_form {top: 20px;right: 0;}
+    .data_cont.check {border: 1px solid;}
+    .mob .mob_plan .coin_action{position: initial;}
+    .mob_plan .coin_action .action-box{top: -5px;}
+    .edit_plan .right_trade { padding-bottom: 10px;}
+    .left_trade .form_group.plan_note_txt {width: 100%;}
+    /*================entries tab css ================*/
+    .modal-open .modal{background: #282828;}
+    .no_data{padding: 60px 0;}
+
+    /*================account tab css ================*/
+    .account_sec,.acount_title,.account_input,button.add_account,.account_box .form_control,.edit_acnt_modal .btn.note_btn{width: 100%;}
+    .account_box{display: block;}
+    .account_input,.account_input.conect_form{margin-top: 16px;}
+    .account_balance{width: 80.5%;}
+    .balance_cont .acount_title p{padding-right: 0;}
+    .account_box .input-group>.form_control{width: 54.3%;}
+    .account_input.conect_form span.select2.select2-container.select2-container--default{width: 100% !important} 
+    .account_box.cont_exchange {display: flex;}
+    .cont_exchange .account_input { margin: 0;}
+    .cont_exchange .account_input .check_form{top: 0;}
+    .edit_acnt_modal .modal-body {padding: 0;}
+    .account_box .profit_price_drop{width: 30.8%;}
+    .note_cnt .note_cont.active {border-left: none;padding-left: inherit;}
+    .nav-stacked>li+li { margin-top: 8px;}
+    /*================account tab css ================*/
+
+}
+
+/* trade journal j for mobile last child */
+.journal_fold ul.nav.nav-pills li:last-child,.for-mobile-journal{
+    margin-bottom: 30px;
+}
+
+.journal_fold-for-mobile ul.nav.nav-pills,.for-mobile-journal{
+    max-height: Calc(405px - 70px);
+    min-height: 435px !important;
+    overflow-y: scroll;
+}
+/* trade journal j for mobile last child */
+
+/* trade journal for note list min height for mobile device */
+.note-list-for-mobile
+
+{
+    min-height: 402px !important;
+    max-height: Calc(465px - 70px);
+}
+
+
+@media (max-width:320px) {
+    .right_trade .calc_bottom .calc_detail {width: 47%;}
+    .account_balance {width: 100%;}
+    .account_box .input-group>.form_control {width: 50.3%;}
+    
+}
+
+
+.note_title .action-box-fordescription{    position: relative;}
+
+.action-box-fordescription,.action-box2 {
+
+    position: absolute;
+    /* top: -100px; */
+    left: 664px;
+  
+    top: none;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+.action-box-fordescription img{width: 12px;height: 100%;}
+/* .action-box-fordescription:hover,.action-box2.open{box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);} */
+.action-box-fordescription:hover .drop-cont{display: block;}
+
+
+
+.action-box-fordescription .drop-cont a{
+    text-align: left;
+    border-bottom: 1px solid #3d3d3d;
+    width: 100%;
+    display: block; 
+    padding: 3px 16px;
+}
+.action-box-fordescription .drop-cont a.add_scren {padding: 0;}
+.action-box-fordescription .drop-cont a label{padding: 6px 16px;width: 100%;}
+.journal_fold .nav-pills li a:hover,.action-box-fordescription .drop-cont a:hover {
+    background-color: #171717;
+    color: #bbbbbb;
+}

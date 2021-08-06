@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Amazon</title>
+</head>
+
+<body>
+    <!--===============================
+Preloading Splash Screen
+===================================-->
+    <div class="pageLoader"></div>
+
+    <div class="majorWrap">
+        <!--========================================
+Header Content
+===========================================-->
+        <header id="sticktop" class="doc-header" *ngIf="blog">
+            <!--========================================
+        Player
+        ===========================================-->
+            <section id="audio-player" class="the-xv-Jplayer">
+                <div id="player-instance" class="jp-jplayer"></div>
+                <div class="controls jp-controls-holder">
+                    <button class="playList-trigger pc-playlist2"></button>
+                    <div class="jp-prev pc-back"></div>
+                    <div class="play-pause jp-play pc-play"></div>
+                    <div class="play-pause jp-pause fa pc-pause" style=" display:none"></div>
+                    <div class="jp-next pc-next"></div>
+                </div>
+                <div class="jp-volume-controls">
+                    <button class="sound-trigger pc-volume"></button>
+                    <div class="jp-volume-bar" style="display: none;">
+                        <div class="jp-volume-bar-value" style="width: 1.4737%;"></div>
+                    </div>
+                </div>
+                <h5 class="audio-title">&ensp;</h5>
+                <div class="player-status">
+                    <div class="audio-progress">
+                        <div class="jp-seek-bar">
+                            <div class="audio-play-bar jp-play-bar" style="width:20%;"></div>
+                        </div>
+                        <!--jp-seek-bar-->
+                    </div>
+                    <!--audio-progress-->
+                </div>
+
+
+            </section>
+            <!--========================================
+        Nav
+        ===========================================-->
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">
+                            Amazon
+                        </a>
+                    </div>
+                    <!-- <div id="dl-menu" class="xv-menuwrapper responsive-menu">
+                        <button *ngIf="home" class="menuTrigger"><i class="fa fa-navicon"></i></button>
+                        <div *ngIf="home" class="clearfix"></div>
+                        <ul class="dl-menu">
+                            <li class="parent active" (click)="blogMenuShow('home')"><a>Home
+                                </a>
+                            </li>
+                            <li (click)="blogMenuShow('blog')"><a>Blog
+                                    <span *ngIf="blog">
+                                        <app-trade-entries></app-trade-entries>
+                                    </span>
+                                </a>
+                            </li>
+                            <li *ngIf="home" class="active"><a href="store.html">Store</a></li>
+                        </ul>
+                    </div> -->
+
+
+                    <div id="dl-menu" class="xv-menuwrapper responsive-menu">
+                        <button class="menuTrigger"><i class="fa fa-navicon"></i></button>
+                        <div class="clearfix"></div>
+                        <ul class="dl-menu">
+                            <li class="parent" (click)="blogMenuShow('home')"><a>Home
+                                </a>
+                            </li>
+                            <li (click)="blogMenuShow('blog')"><a>Blog
+
+                                </a>
+                            </li>
+
+                            <!-- <li><a href="store.html">Store</a></li> -->
+
+                        </ul>
+                    </div>
+                    <!-- /dl-menuwrapper -->
+                </div>
+            </nav>
+        </header>
+
+        <header id="sticktop" class="doc-header" *ngIf="home">
+
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">
+                            Amazon
+                        </a>
+                    </div>
+
+                    <div id="dl-menu" class="xv-menuwrapper responsive-menu">
+                        <button class="menuTrigger"><i class="fa fa-navicon"></i></button>
+                        <div class="clearfix"></div>
+                        <ul class="dl-menu">
+                            <li class="parent" (click)="blogMenuShow('home')"><a>Home
+                                </a>
+                            </li>
+                            <li (click)="blogMenuShow('blog')"><a>Blog
+
+                                </a>
+                            </li>
+
+                            <!-- <li><a href="store.html">Store</a></li> -->
+
+                        </ul>
+                    </div>
+                    <!-- /dl-menuwrapper -->
+                </div>
+            </nav>
+        </header>
+
+        <div id="ajaxArea" *ngIf="home">
+            <!--=================================
+    Events Countdown
+    =================================-->
+
+            <section class="events-countdown parallax parallax_five parallax_overlay text-bold"
+                data-stellar-background-ratio="0.5">
+                <div class="parallax_inner">
+
+                    <div class="event">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3 slide-visual">
+                                    <figure class="">
+                                        <img src="assets/demo-data/amazoneRegistry.png" alt="" />
+                                    </figure>
+                                </div>
+                                <!--column-->
+                                <div class="col-xs-12 col-sm-6 col-md-6 about-album">
+                                    <div class="event-details">
+                                        <h2>Amazon</h2>
+                                        <h6>By Amazon Referral Program</h6>
+                                        <p>
+                                            <strong>There are many reasons to make money with your own
+                                                website.</strong><br /> Amazon Bounty Program<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--column-->
+                            </div>
+                            <!--row-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--=================================================
+    events finder
+    ==================================================-->
+            <section class="events-finder">
+                <div class="container">
+                    <img src="assets/demo-data/How-to-make-money-from-Amazon.jpg" alt="" width="509" height="252" />
+                </div>
+            </section>
+
+            <section class="events-finder">
+                <div class="container">
+                    <header>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-3">
+                                <h2 class="text-uppercase">Latest Amazon Products.</h2>
+                            </div>
+                            <div class="col-xs-12 col-md-9">
+                                <div class="event-form text-right">
+
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="featured-events">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="store-grid text-uppercase text-bold">
+                                    <div class="store-product">
+                                        <figure>
+                                            <img width="265" height="265" src="assets/demo-data/a1.jpg">
+                                            <figcaption>
+                                                <a href="event-single.html" class="btn btn-grey"><i
+                                                        class="fa fa-ticket "></i> Buy</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="product-info">
+                                            <h3>Amazon Product</h3>
+                                            <!-- <h6><i class="fa fa-clock-o"></i>10/02/2016</h6> -->
+                                            <!-- <span class="price-tag">$16.90</span> -->
+                                        </div>
+                                    </div>
+                                    <!--store-product-->
+                                    <div class="store-product">
+                                        <figure>
+                                            <img width="265" height="265" src="assets/demo-data/a2.jpg">
+                                            <figcaption>
+                                                <a href="event-single.html" class="btn btn-grey"><i
+                                                        class="fa fa-ticket "></i> Buy</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="product-info">
+                                            <h3>Amazon Product</h3>
+                                            <!-- <h6><i class="fa fa-clock-o"></i>05/02/2016</h6>
+                                            <span class="price-tag">$16.90</span> -->
+                                        </div>
+                                    </div>
+                                    <!--store-product-->
+                                    <div class="store-product">
+                                        <figure>
+                                            <img width="265" height="265" src="assets/demo-data/a3.jpg">
+                                            <figcaption>
+                                                <a href="event-single.html" class="btn btn-grey"><i
+                                                        class="fa fa-ticket "></i> Buy</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="product-info">
+                                            <h3>Amazon Product</h3>
+                                            <!-- <h6><i class="fa fa-clock-o"></i>28/01/2016</h6>
+                                            <span class="price-tag">$16.90</span> -->
+                                        </div>
+                                    </div>
+                                    <!--store-product-->
+                                    <div class="store-product">
+                                        <figure>
+                                            <img width="265" height="265" src="assets/demo-data/a4.jpg">
+                                            <figcaption>
+                                                <a href="event-single.html" class="btn btn-grey"><i
+                                                        class="fa fa-ticket "></i> Buy</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="product-info">
+                                            <h3>Amazon Product</h3>
+                                            <!-- <h6><i class="fa fa-clock-o"></i>07/01/2016</h6>
+                                            <span class="price-tag">$16.90</span> -->
+                                        </div>
+                                    </div>
+                                    <!--store-product-->
+                                    <div class="store-product">
+                                        <figure>
+                                            <img width="265" height="265" src="assets/demo-data/a5.jpg">
+                                            <figcaption>
+                                                <a href="event-single.html" class="btn btn-grey"><i
+                                                        class="fa fa-ticket "></i> Buy</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="product-info">
+                                            <h3>Amazon Product</h3>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--album-grid-->
+                                <!-- <a class="btn btn-wide btn-grey text-uppercase text-bold" href="store.html">View All</a> -->
+                            </div>
+                            <!--column-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--=================================================
+    Contact
+    ==================================================-->
+            <section>
+                <header>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2 class="text-uppercase">Contact us.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!--section header-->
+                <div class="container">
+                    <form id="contactForm" novalidate class="text-uppercase text-semibold row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="field-wrap">
+                                <label for="xv_name">Jamal Haider</label>
+                                <input name="xv_name" id="xv_name" type="text" required="required" disabled />
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="field-wrap">
+                                <label class="tranparent" for="xv_email">jamalhaider879@gmail.com</label>
+                                <input name="xv_email" class="tranparent" id="xv_email" type="email" required="required"
+                                    disabled />
+                            </div>
+                        </div>
+                        <!-- <div class="col-xs-12">
+                            <div class="field-wrap textarea-wrap">
+                                <label for="xv_message">Your Message</label>
+                                <textarea name="xv_message" id="xv_message" disabled></textarea>
+                            </div>
+                        </div> -->
+                        <div class="col-xs-12 text-center">
+                            <button class="btn btn-default btn-md" type="submit">Contact 03139700099</button>
+                        </div>
+                        <div class="col-xs-12 text-center">
+                            <div class="validationError">
+                                <div class="alert alert-danger" role="alert">
+                                    Oh
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="messageSentSuccess">
+                        <div class="alert alert-success" role="alert">Message has been sent successfully</div>
+                    </div>
+
+                </div>
+                <!--container-->
+
+            </section>
+        </div>
+
+        <div id="ajaxArea" *ngIf="blog">
+            <!--=================================
+    Blog Section
+        =================================-->
+            <section>
+
+                <header class="style4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2>Wedding and Baby Registry</h2>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!--section header-->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="blog-wrapper">
+
+                            <article>
+                                <figure>
+                                    <img src="assets/demo-data/n2.jpg" alt="" width="509" height="252" />
+                                </figure>
+                                <div class="about-article text-center text-uppercase">
+                                    <h2 class="text-semibold"><a
+                                            href="https://m.facebook.com/groups/3031123140443698/permalink/3031124580443554/">Wedding
+                                            Registry</a></h2>
+
+                                    <ul class="social-list">
+                                        <li><a class="fa fa-facebook fb-bg"
+                                                href="https://m.facebook.com/groups/3031123140443698/permalink/3031124580443554/"></a>
+                                        </li>
+                                        <!-- <li><a class="fa fa-twitter tweet-bg"
+                                                href="http://twitter.com/intent/tweet?status=URL"></a></li> -->
+                                    </ul>
+                                </div>
+                                <p>You can register for anything on Amazon. Enjoy a special completion discount on any
+                                    items left on your registry. Two-day shipping on eligible registry items—you'll get
+                                    your gifts in a snap! ... You can return any gift within 180 days.</p>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="assets/demo-data/n1.jpg" alt="" width="509" height="252" />
+                                </figure>
+                                <div class="about-article text-center text-uppercase">
+                                    <h2 class="text-semibold"><a
+                                            href="https://m.facebook.com/groups/3031123140443698/permalink/3031126520443360/">Baby
+                                            Registry</a></h2>
+
+                                    <ul class="social-list">
+                                        <li><a class="fa fa-facebook fb-bg"
+                                                href="https://m.facebook.com/groups/3031123140443698/permalink/3031126520443360/"></a>
+                                        </li>
+                                        <!-- <li><a class="fa fa-twitter tweet-bg"
+                                                href="http://twitter.com/intent/tweet?status=URL"></a></li> -->
+                                    </ul>
+                                </div>
+                                <p>Amazon has millions of products to fill your house with all the right baby things.
+                                    Free 365-Day Returns. You have a full 365 days to return most items purchased from
+                                    your registry.</p>
+                            </article>
+
+
+
+                        </div>
+                        <!--blog-wrapper-->
+                    </div>
+                    <!--row-->
+                </div>
+                <!--container-->
+
+            </section>
+        </div>
+        <!--=================================================
+    Tweets
+    ==================================================-->
+
+        <div class="parallax parallax_one text-bold text-center" data-stellar-background-ratio="0.5">
+            <div class="parallax_inner">
+                <div class="container">
+                    <span class="fa fa-twitter parallax-icon"></span>
+                    <div class="tweet"></div>
+                </div>
+            </div>
+        </div>
+        <!--parallax-->
+
+    </div>
+    <!--=================================
+Footer
+=================================-->
+    <footer class="doc-footer text-uppercase text-center text-bold">
+        <div class="container">
+            <ul class="social-list style2 circular">
+                <li><a href="https://web.facebook.com/aftab.haiderr" class="fa fa-facebook"></a></li>
+                <!-- <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-google-plus"></a></li>
+                <li><a href="#" class="fa fa-tumblr"></a></li>
+                <li><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="#" class="fa fa-dribbble"></a></li>
+                <li><a href="#" class="fa fa-tumblr"></a></li>
+                <li><a href="#" class="fa fa-vimeo"></a></li> -->
+            </ul>
+            <div class="row">
+                <div class="col-xs-12">
+                    <strong>&copy; Copyright 2021</strong>
+                    <!-- <p>on suono you can listen to thousands songs and buy your favorite songs or albums.</p> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--=================================
+Script Source
+=================================-->
+
+
+</body>
+
+</html>

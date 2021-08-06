@@ -1,0 +1,38 @@
+<div class="form-body without-side">
+    <div class="website-logo">
+        <a href="index.html">
+            <!-- <div class="logo">
+                <img class="logo-size" src="./assets/images/logo.svg" alt="">
+  
+            </div> -->
+        </a>
+    </div>
+    <div class="row">
+        <div class="img-holder">
+            <div class="bg"></div>
+        </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Login to account</h3>
+                    <!-- <p>Access to the most powerfull tool in the entire design and web industry.</p> -->
+                    <form [formGroup]="loginForm" novalidate id="loginform" (ngSubmit)="tryLogin(loginForm.value)">
+                        <input class="form-control" type="email" formControlName="email" required name="email"
+                            placeholder="E-mail Address" required>
+                        <input class="form-control" type="password" formControlName="password" required name="password"
+                            placeholder="Password" required>
+                        <div class="form-button">
+                            <button id="submit" [disabled]="!loginForm.valid || loginProcess"
+                                [class.loader]="loginProcess" type="submit" class="ibtn">Login</button>
+                            <!-- <a routerLink="/forgotpassword">Forget password?</a> -->
+                        </div>
+                    </form>
+
+                    <div class="page-links">
+                        <a routerLink="/register">Register new account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
