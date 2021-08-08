@@ -43,4 +43,21 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  home = true;
+  blog = false;
+  homeMenuShow() {
+    this.home = true;
+    this.blog = false;
+  }
+  blogMenuShow(value) {
+    if (value == 'home') {
+      this.home = true;
+      this.blog = false;
+    }
+    else {
+      this.home = false;
+      this.blog = true;
+    }
+
+  }
 }
